@@ -1,0 +1,17 @@
+---
+title: "index"
+author: "Yuting Chiu"
+date: "April 27, 2017"
+output: html_document
+---
+##The relationship between sepal length and petal length 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+
+p <- plot_ly(data = iris, x = ~Sepal.Length, y = ~Petal.Length, type='scatter',
+             mode='markers', text = ~paste('Species: ', Species))
+
+p
+```
+
